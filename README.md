@@ -19,8 +19,8 @@ we think they do. Tests help us identify bugs and judge how healthy our
 applications are.
 
 We use tests to describe the program's behavior, just as you would in a
-professional coding environment, and we also use them as teaching tools. You are
-in charge of getting the tests to pass.
+professional coding environment, and we also use them as teaching tools. We will learn how to write our own tests in later modules, but for now you are
+only in charge of getting given tests to pass.
 
 ### Structure
 
@@ -63,7 +63,7 @@ describe('index.js', function () {
 `describe` is a function provided by our test library, Mocha, and it's used to
 hold our tests. After the word `describe` is information about our tests. Tests
 are used as a way to document the behavior of a function to developers. For
-example, the next word `describe` is followed by the word `companyName`. Here
+example, the next word `describe` is followed by is the word `companyName`. Here
 the test is telling us that the tests that come afterwards will be about
 `companyName`. Then comes the word `it`, where you see the following:
 
@@ -95,10 +95,15 @@ gather the information that you can. We will also provide instructions in the
 
 ## Running the Tests
 
-To run the tests, type `learn test` in the terminal. You should now see the
-current status of the tests in the terminal. For the moment, all of the tests
-fail. Let's figure out how to get one of them passing! (The rest will be up to
-you.)
+We learned how to run tests in **Completing Your First Software Engineering Assignment**, but it may take a few times before the process becomes comfortable. 
+So, let's run through it again together. 
+
+1. The first step is to install the required testing dependencies using `npm install`. 
+  - As always, make sure you are in the root directory of the cloned lab when running this command.
+2. The second step is to run the test using `npm test`.
+
+You should now see the current status of the tests in the terminal. For the moment, 
+all of the tests fail. Let's figure out how to get one of them passing! (The rest will be up to you.)
 
 To get our first test to pass, we can open up our `index.js` file, and write the
 following:
@@ -107,39 +112,83 @@ following:
 let companyName = 'Scuber';
 ```
 
-If you run `learn test` again, you'll see that our first test is now passing.
+If you run `npm test` again, you'll see that our first test is now passing.
 However, the second test, which is also about `companyName`, is not yet passing.
 It's not passing because it expects `companyName` to be declared using a
 different keyword than the `let` keyword — it needs a keyword that is used for
-variables that can't be changed...
+variables that can't be changed... can you remember what that is?
 
 Continue to work through the problems below. Keep in mind the general workflow
 for a lab:
 
-1. Run `learn test`.
+1. Run `npm test`.
 2. Read the errors; vocalize what they're asking you to do.
 3. Write code; repeat steps 1 and 2 often until a test passes.
 4. Repeat as needed until all the tests are passing.
 
 ## Working Through the Problems
 
-If you open up `test/indexTest.js`, you will see the tasks in front of you:
+If you open up `test/indexTest.js`, you will see all the tasks in front
+of you. We recommend attempting to read the tests to figure out what is 
+asked of you. 
 
-- `companyName` — Inside the `test/indexTest.js` file, look at the
-  `describe` function call for the `companyName` variable. The two `it` function
-  calls inside this `describe` tell us the features of `companyName` we need to
-  create. To review, in the first `it` function call, it says that `it`
-  (companyName) `is set as Scuber`. In the next line, you can see that the test
-  checks to make sure this occurs by seeing if `companyName` equals `Scuber`. So
-  this means that you need to go to your `index.js` file and declare a variable
-  named `companyName` and set it equal to `Scuber`.
-- In the second `it` function call for `companyName`, it says it `is defined as
-  a const`. The next line of code tests this. So you need to make sure that you
-  are using the correct type of variable declaration such that attempting to
-  reassign the variable throws an error.
-- `mostProfitableNeighborhood` and `companyCeo` — Here we are getting more
-  practice with declaring variables. Read the tests to see how you need to code
-  these two variables to get the remaining tests passing.
+To review what we did together, recall that we looked at the `describe`
+function call for the `companyName` variable. This is how we knew we 
+needed a variable named `companyName`. 
+
+Then, we saw there are two `it` function calls inside this `describe` 
+function. The first one says it expects the variable `companyName` to be 
+set as Scuber. To pass this, we went into `index.js` and wrote the line 
+`let companyName = 'Scuber'`. 
+
+The second `it` function call says it expects `companyName` to be defined 
+as a `const`. To pass this, you should again go into your `index.js` and make sure you are using the correct type of variable declaration for this 
+particular variable.
+
+The remaining tests follow the same structure, where it checks for a 
+variable to be defined with a certain value and declaration. Try reading
+through them and passing them by writing code in `index.js` to complete 
+the lab. 
+
+<details>
+<summary>Expand this dropdown for more guidance or to check if you're reading the tests correctly</summary>
+
+  - `companyName` 
+    - Should be set to `Scuber`
+    - Should be defined as a `const` 
+  - `mostProfitableNeighborhood`
+    - Should be set to `Chelsea`
+    - Should be defined using `let`
+  - `companyCeo`
+    - Should be set to `Susan Smith`
+    - Should be defined using `let`
+</details>
+
+## Submitting the Assignment
+
+Similar to running tests, we also learned how to submit assignments in the
+**Completing Your First Software Engineering Assigmnent**. In case you forget how to run tests or submit assignments for any labs going forward, that assignment is a good one to refresh your memory. 
+
+For this lab, though, we will quickly run through the steps together.
+
+1. Track all the work you did for the lab using `git add -A`.
+  - Again, make sure you are in the root directory of the cloned lab when running this command.
+2. Save all the work you just tracked using `git commit -m "some message here"` 
+  - Be sure your message is informative but succint, for example "complete lab".
+3. Push all the work you tracked and save to your forked version of the lab on GitHub using `git push origin main` 
+
+Now if you check your forked version on GitHub, you should see all the work you did online. 
+
+> **NOTE**: You can run the above three steps as often as you would like when working on labs and code projects in general. In fact, it is good practice to commit often whenever you complete a milestone rather than only one time at the end when you complete an entire project. We will learn more about this and git at the end of this module.  
+
+Once you've passed all tests and pushed all your work onto your GitHub fork, you should then:
+
+1. Copy the link for your GitHub fork of the lab.
+  - Check the link to make sure you see **your** username. If it's not there, you are _not_ copying your forked version.
+2. Go back to the Canvas assignment for this lab and click the **Start Assignment** button at the top. 
+3. Paste in the copied link into the Website URL box and hit submit.
+
+With that, you've completed your first JavaScript assignment!
 
 ## Resources
 
