@@ -108,6 +108,32 @@ As we saw above when running `npm test`, the tasks for you to complete in `index
   - Should be set to `Susan Smith`
   - Should be defined using `let`
 
+## Submitting the Assignment
+
+Similar to running tests, we also learned how to submit assignments in the
+**Completing Your First Software Engineering Assigmnent**. In case you forget how to run tests or submit assignments for any labs going forward, that assignment is a good one to refresh your memory. 
+
+For this lab, though, we will quickly run through the steps together.
+
+1. Track all the work you did for the lab using `git add -A`.
+  - Again, make sure you are in the root directory of the cloned lab when running this command.
+2. Save all the work you just tracked using `git commit -m "some message here"` 
+  - Be sure your message is informative but succint, for example "complete lab".
+3. Push all the work you tracked and save to your forked version of the lab on GitHub using `git push origin main` 
+
+Now if you check your forked version on GitHub, you should see all the work you did online. 
+
+> **NOTE**: You can run the above three steps as often as you would like when working on labs and code projects in general. In fact, it is good practice to commit often whenever you complete a milestone rather than only one time at the end when you complete an entire project. We will learn more about this and git at the end of this module.  
+
+Once you've passed all tests and pushed all your work onto your GitHub fork, you should then:
+
+1. Copy the link for your GitHub fork of the lab.
+  - Check the link to make sure you see **your** username. If it's not there, you are _not_ copying your forked version.
+2. Go back to the Canvas assignment for this lab and click the **Start Assignment** button at the top. 
+3. Paste in the copied link into the Website URL box and hit submit.
+
+With that, you've completed your first JavaScript assignment!
+
 ## Resources
 
 - [MDN: Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
